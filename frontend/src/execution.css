@@ -1,0 +1,11 @@
+/* Shared by the normal dashboard and the library's Robot Script panel. */
+.execution-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 12px 0; }
+.script-panel-footer { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.script-panel-footer h3 { margin: 0; }
+.execution-panel summary { cursor: pointer; font-weight: 600; }
+.execution-panel .cancel-button { color: #b91c1c; border-color: #fca5a5; }
+.execution-panel > button { margin-top: 14px; }
+.execution-logs { max-height: 300px; overflow: auto; padding: 14px; color: #dbeafe; background: #0f172a; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; }
+.subtask-status { list-style: none; padding: 0; }
+.subtask-status li { padding: 8px 0; }
+.subtask-status span { padding: 3px 8px; border-radius: 6px; background: var(--surface-soft); }

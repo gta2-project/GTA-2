@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="590" viewBox="0 0 720 590" role="img" aria-labelledby="title desc">
+<title id="title">Execution architecture</title><desc id="desc">The dashboard supervisor owns GTA server and script processes; the script publishes ROS command errors and the server controls the arm via RTDE and the gripper via actions. External camera and gripper drivers have independent lifecycles.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#52717a"/></marker><style>text{font-family:system-ui,sans-serif;fill:#173746} .title{font-size:25px;font-weight:700}.label{font-size:21px;font-weight:650}.note{font-size:17px;fill:#45616d}.tag{font-size:16px;font-weight:700;fill:#087f70}.box{fill:white;stroke:#b7ccd1;stroke-width:1.5}.flow{fill:none;stroke:#52717a;stroke-width:2;marker-end:url(#arrow)}.accent{fill:#e3f5ee;stroke:#63b69e;stroke-width:1.5}</style></defs><rect width="720" height="100%" rx="14" fill="#f7fafb"/>
+<text x="32" y="44" class="title">Execution architecture</text>
+<rect x="32" y="72" width="656" height="388" rx="16" fill="#edf5f7" stroke="#8cb3c0" stroke-dasharray="7 5"/>
+<text x="52" y="107" class="tag">GTA SUPERVISOR · OWNED CHILD PROCESSES</text>
+<rect x="52" y="130" width="280" height="108" rx="12" class="box"/><text x="72" y="167" class="label">Generated script</text><text x="72" y="196" class="note">Perception → 3D preview</text><text x="72" y="220" class="note">Controllers → projected errors</text>
+<rect x="388" y="130" width="280" height="108" rx="12" class="box"/><text x="408" y="167" class="label">Robot server</text><text x="408" y="196" class="note">Validation + motion limits</text><text x="408" y="220" class="note">Control + cleanup</text>
+<path d="M332 184H381" class="flow"/><text x="259" y="270" class="note">ROS /robot/* commands</text>
+<rect x="52" y="309" width="280" height="119" rx="12" class="accent"/><text x="72" y="345" class="label">Operator controls</text><text x="72" y="375" class="note">Run · Skip · Cancel</text><text x="72" y="403" class="note">Readiness and process logs</text>
+<text x="408" y="345" class="label">State reader</text><text x="408" y="375" class="note">Fresh TCP pose via RTDE</text><text x="408" y="403" class="note">Position + orientation</text>
+<path d="M398 238V486H420V503" class="flow"/><path d="M460 503V428" class="flow"/><path d="M624 238V503" class="flow"/>
+<text x="345" y="489" class="note">RTDE</text><text x="547" y="489" class="note">ROS action</text>
+<rect x="340" y="510" width="160" height="67" rx="12" class="box"/><text x="360" y="551" class="label">UR5e arm</text>
+<rect x="518" y="510" width="170" height="67" rx="12" class="box"/><text x="536" y="551" class="label">Gripper</text>
+<text x="32" y="510" class="tag">EXTERNAL LIFECYCLES</text><text x="32" y="540" class="note">Camera + cloud producers</text><text x="32" y="566" class="note">Device drivers start separately</text>
+</svg>

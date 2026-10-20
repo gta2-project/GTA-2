@@ -1,0 +1,15 @@
+openai>=1.0.0
+python-dotenv>=1.0.0
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+google-genai>=1.0.0
+Pillow>=10.0.0
+opencv-python>=4.10.0
+open3d>=0.18.0
+matplotlib>=3.7.0
+numpy>=1.24.0
+scipy>=1.10.0
+PyYAML>=6.0
+pynput>=1.7.6  # Keyboard input for teleoperation controllers
+# ROS 2 support uses rclpy, sensor_msgs, std_msgs, and control_msgs from a
+# sourced ROS 2/robot workspace. UR RTDE packages also come from that workspace.

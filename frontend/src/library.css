@@ -1,0 +1,87 @@
+/* Loaded exclusively by library.html; the main.py dashboard keeps its own styles. */
+.library-app { max-width: 1600px; margin: 0 auto; padding: 18px 24px; }
+.library-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+.library-tabs { display: flex; gap: 24px; }
+.library-tabs a { padding: 8px 0 12px; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; }
+.library-tabs a[aria-current="page"] { color: var(--text); font-weight: 700; border-color: var(--blue); }
+.library-app .app-shell { min-height: 0; padding: 0; }
+.library-app .workspace { padding: 0; }
+.library-container { padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.library-container h1 { margin: 0 0 10px; font-size: 22px; }
+.checkpoint-library { padding: 12px 0 32px; }
+.library-intro { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+.library-intro h1 { display: flex; align-items: center; gap: 12px; margin: 0 0 8px; font-size: 28px; letter-spacing: -0.7px; }
+.library-intro p { margin: 0; color: var(--muted); line-height: 1.6; }
+.library-intro .button-link { flex-shrink: 0; }
+.library-count { min-width: 28px; padding: 4px 8px; border-radius: 7px; background: #e7edf7; color: var(--text-soft); font-size: 13px; font-weight: 600; letter-spacing: 0; text-align: center; }
+.library-filters { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.library-search { position: relative; display: flex; align-items: center; width: 380px; max-width: 100%; }
+.library-search > svg { position: absolute; left: 13px; color: var(--muted); pointer-events: none; }
+.library-search input { height: 40px; padding: 0 38px; background: var(--surface); font-size: 14px; }
+.library-search input::-webkit-search-cancel-button { display: none; }
+.library-search .library-clear { position: absolute; right: 5px; width: 30px; min-height: 30px; padding: 0; border-color: transparent; background: transparent; color: var(--muted); }
+.library-filters select { width: 175px; height: 40px; background: var(--surface); font-size: 14px; }
+.library-results { margin-left: auto; color: var(--muted); font-size: 13px; white-space: nowrap; }
+.checkpoint-list { display: grid; gap: 18px; }
+.checkpoint-card { display: grid; grid-template-columns: minmax(260px, 30%) minmax(0, 1fr); border: 1px solid var(--line); border-radius: 12px; background: var(--surface); box-shadow: 0 3px 12px rgba(15, 23, 42, 0.025); }
+.checkpoint-image { position: relative; display: grid; place-items: center; min-height: 252px; background: #e9eef4; border-right: 1px solid var(--line-soft); border-radius: 11px 0 0 11px; overflow: hidden; }
+.checkpoint-image img { position: absolute; width: 100%; height: 100%; object-fit: contain; }
+.checkpoint-image-label { position: absolute; bottom: 12px; left: 12px; padding: 5px 9px; border: 1px solid rgba(255, 255, 255, 0.55); border-radius: 5px; background: rgba(255, 255, 255, 0.92); color: var(--text-soft); font-size: 11px; font-weight: 600; }
+.checkpoint-image-empty { display: grid; justify-items: center; gap: 12px; color: var(--muted); font-size: 13px; }
+.checkpoint-content { display: flex; flex-direction: column; min-width: 0; padding: 24px; }
+.checkpoint-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.checkpoint-heading > div { min-width: 0; }
+.checkpoint-heading h2 { margin: 0 0 6px; font-size: 21px; letter-spacing: -0.35px; overflow-wrap: anywhere; }
+.checkpoint-heading time { color: var(--muted); font-size: 12px; }
+.checkpoint-status { display: inline-flex; flex-shrink: 0; align-items: center; gap: 5px; padding: 5px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface-soft); color: var(--muted); font-size: 11px; font-weight: 600; }
+.checkpoint-status.is-visible { color: #1d4ed8; background: #eff6ff; border-color: #dbeafe; }
+.checkpoint-task { margin: 18px 0 12px; max-width: 85ch; color: var(--text-soft); line-height: 1.6; overflow-wrap: anywhere; }
+.checkpoint-notes { margin-bottom: 16px; color: var(--muted); font-size: 13px; }
+.checkpoint-notes summary { width: fit-content; cursor: pointer; }
+.checkpoint-notes p { margin: 10px 0 0; padding: 12px; border-radius: 6px; background: var(--surface-soft); color: var(--text-soft); white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6; }
+.checkpoint-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: auto; padding-top: 18px; }
+.checkpoint-primary-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.checkpoint-primary-actions button { min-height: 38px; font-size: 13px; font-weight: 600; }
+.checkpoint-tools { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.checkpoint-tools button { padding: 0 4px; border-color: transparent; background: transparent; color: var(--muted); font-size: 12px; }
+.checkpoint-tools .checkpoint-visibility { gap: 7px; }
+.checkpoint-switch { position: relative; width: 28px; height: 16px; border-radius: 20px; background: #94a3b8; flex-shrink: 0; }
+.checkpoint-switch::after { content: ''; position: absolute; top: 3px; left: 3px; width: 10px; height: 10px; border-radius: 50%; background: white; }
+.checkpoint-visibility[aria-checked="true"] .checkpoint-switch { background: var(--blue); }
+.checkpoint-visibility[aria-checked="true"] .checkpoint-switch::after { left: 15px; }
+.library-empty { display: grid; justify-items: center; padding: 64px 24px; border: 1px dashed var(--line-strong); border-radius: 12px; text-align: center; background: rgba(255, 255, 255, 0.5); color: var(--muted); }
+.library-empty h2 { margin: 16px 0 8px; font-size: 19px; color: var(--text); }
+.library-empty p { max-width: 400px; margin: 0 0 18px; line-height: 1.6; }
+.library-footnote { margin: 18px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.library-app .script-preview { max-height: 420px; overflow: auto; }
+.checkpoint-save form { display: grid; gap: 12px; margin-top: 16px; }
+.checkpoint-save label { display: grid; gap: 6px; }
+.checkpoint-save input, .checkpoint-save textarea, .library-selection select { padding: 9px; border: 1px solid var(--line); border-radius: 6px; font: inherit; background: var(--surface); color: var(--text); }
+.checkpoint-save .checkbox-label { display: flex; gap: 10px; }
+.library-selection { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-left: auto; max-width: 100%; padding-bottom: 8px; }
+.library-selection select { min-width: 0; width: clamp(180px, 24vw, 320px); max-width: 100%; }
+.library-selection-hint { margin: 0 0 20px; color: var(--muted); }
+.refinement-panel summary { cursor: pointer; font-weight: 600; }
+.refinement-panel { padding: 12px 0; }
+@media (max-width: 1100px) {
+  .checkpoint-tools { margin-left: 0; }
+}
+@media (max-width: 760px) {
+  .library-intro { align-items: flex-start; flex-wrap: wrap; }
+  .library-filters { flex-wrap: wrap; }
+  .library-search { width: 100%; }
+  .checkpoint-card { grid-template-columns: minmax(0, 1fr); }
+  .checkpoint-image { min-height: 0; aspect-ratio: 16 / 9; border-right: 0; border-bottom: 1px solid var(--line-soft); border-radius: 11px 11px 0 0; }
+  .checkpoint-content { padding: 20px; }
+  .checkpoint-heading { flex-wrap: wrap; gap: 10px; }
+  .checkpoint-heading h2 { font-size: 20px; }
+  .checkpoint-primary-actions { width: 100%; }
+  .checkpoint-primary-actions button { flex: 1; white-space: nowrap; padding: 0 10px; }
+  .checkpoint-tools { width: 100%; justify-content: space-between; }
+}
+@media (max-width: 640px) {
+  .library-app { padding: 12px; }
+  .library-selection { flex-basis: 100%; margin-left: 0; }
+  .library-selection label { flex-basis: 100%; }
+  .library-selection select { min-width: 0; flex: 1; }
+}

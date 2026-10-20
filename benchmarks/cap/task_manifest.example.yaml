@@ -1,0 +1,20 @@
+id: example_task
+task: Perform the requested manipulation using the visible objects.
+success_criteria:
+  - The requested object state is visibly achieved.
+image: ../../environment.jpg
+
+# Use this for deterministic offline replay. Remove it to invoke the Vision
+# Module with the point cloud below.
+perception: null
+point_cloud: null
+point_cloud_frame: base
+
+# Used by offline policy execution only. Robot execution reads the live TCP pose.
+initial_pose: [0.0, -0.491, 0.487, -2.221, -2.221, 0.0]
+
+safety:
+  workspace_min: [-1.0, -1.5, -0.10]
+  workspace_max: [1.0, 0.50, 1.50]
+  max_abs_force_n: 30.0
+

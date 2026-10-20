@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560" role="img" aria-labelledby="title desc">
+<title id="title">GTA-2 pipeline</title><desc id="desc">Task decomposition, controller selection, parameterization, and visual grounding lead to script generation and robot execution. Feedback updates the selected stage and downstream outputs.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#52717a"/></marker><style>text{font-family:system-ui,sans-serif;fill:#173746} .title{font-size:25px;font-weight:700}.label{font-size:21px;font-weight:650}.note{font-size:17px;fill:#45616d}.tag{font-size:16px;font-weight:700;fill:#087f70}.box{fill:white;stroke:#b7ccd1;stroke-width:1.5}.flow{fill:none;stroke:#52717a;stroke-width:2;marker-end:url(#arrow)}.accent{fill:#e3f5ee;stroke:#63b69e;stroke-width:1.5}</style></defs><rect width="720" height="100%" rx="14" fill="#f7fafb"/>
+<text x="32" y="44" class="title">GTA-2 pipeline</text>
+<rect x="32" y="78" width="294" height="92" rx="12" class="box"/><text x="52" y="111" class="tag">01 · TASK DECOMPOSER</text><text x="52" y="145" class="label">Ordered subtasks</text>
+<path d="M326 124H389" class="flow"/>
+<rect x="396" y="78" width="292" height="92" rx="12" class="box"/><text x="416" y="111" class="tag">02 · SKILL GENERATOR</text><text x="416" y="145" class="label">Controller recipes</text>
+<path d="M542 170V219" class="flow"/>
+<rect x="396" y="226" width="292" height="92" rx="12" class="box"/><text x="416" y="259" class="tag">03 · PARAMETER SETTER</text><text x="416" y="293" class="label">Values + units</text>
+<path d="M396 272H333" class="flow"/>
+<rect x="32" y="226" width="294" height="92" rx="12" class="box"/><text x="52" y="259" class="tag">04 · VISION MODULE</text><text x="52" y="293" class="label">Image keypoints</text>
+<path d="M179 318V365" class="flow"/>
+<rect x="32" y="372" width="294" height="94" rx="12" class="accent"/><text x="52" y="409" class="label">Script generation</text><text x="52" y="439" class="note">Python controller script</text>
+<path d="M326 419H389" class="flow"/>
+<rect x="396" y="372" width="292" height="94" rx="12" class="box"/><text x="416" y="409" class="label">Robot execution</text><text x="416" y="439" class="note">GTA client + robot server</text>
+<text x="32" y="518" class="note">Feedback starts at a selected stage and updates downstream outputs.</text>
+</svg>

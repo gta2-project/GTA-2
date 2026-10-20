@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+.venv-docs/
+.venv-docs-qa/
+.venv-docs-node/
+/docs/_build/
+
+# Environment Variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Frontend
+/frontend/node_modules/
+/frontend/dist/
+
+# Distribution
+*.whl
+
+/annotated_keypoints.png
+/benchmark_runs/
+/environment.jpg
+/generated_plans/
+/keypoint_locations.json
+/resized_img.png
+/robot_script.py
+/skills_output.json
+/library_checkpoints/
+/library_sessions/
+/execution_logs/
+/.gta-robot-execution.lock
+/*-robot_script.py
+/*-events.jsonl
+
+# Local reference material
+/backup_instructions/
+/presentation/

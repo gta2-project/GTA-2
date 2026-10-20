@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="500" viewBox="0 0 720 500" role="img" aria-labelledby="title desc">
+<title id="title">Coordinate frames and tool offset</title><desc id="desc">The base-to-reported-TCP pose transforms an additional local GTA tool-point offset. The physical controller TCP and this additional point are separate. Named axes are directions, not necessarily a right-handed basis.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#52717a"/></marker><style>text{font-family:system-ui,sans-serif;fill:#173746} .title{font-size:25px;font-weight:700}.label{font-size:21px;font-weight:650}.note{font-size:17px;fill:#45616d}.tag{font-size:16px;font-weight:700;fill:#087f70}.box{fill:white;stroke:#b7ccd1;stroke-width:1.5}.flow{fill:none;stroke:#52717a;stroke-width:2;marker-end:url(#arrow)}.accent{fill:#e3f5ee;stroke:#63b69e;stroke-width:1.5}</style></defs><rect width="720" height="100%" rx="14" fill="#f7fafb"/>
+<text x="32" y="44" class="title">TCP and tool-point offset</text>
+<path d="M96 300V174 M96 300H237" stroke="#52717a" stroke-width="3" fill="none" marker-end="url(#arrow)"/><circle cx="96" cy="300" r="7" fill="#52717a"/>
+<text x="36" y="341" class="label">Robot base</text><text x="36" y="370" class="note">Cloud and pose frame</text>
+<path d="M129 277L345 165" class="flow"/><text x="178" y="188" class="note">Reported pose (R, p)</text>
+<circle cx="375" cy="150" r="9" fill="#087f70"/><path d="M375 150V93 M375 150H430" stroke="#087f70" stroke-width="3" fill="none"/>
+<text x="444" y="114" class="label">Configured TCP</text><text x="444" y="141" class="note">Returned by RobotState</text>
+<path d="M379 161L458 271" stroke="#087f70" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="491" y="207" class="tag">R × local offset</text>
+<circle cx="470" cy="288" r="11" fill="#cf8a2a"/><text x="492" y="293" class="label">GTA tool point</text><text x="492" y="320" class="note">g_eef_TCP</text>
+<path d="M111 300L449 289" stroke="#9faeb6" stroke-width="2" stroke-dasharray="6 5"/>
+<rect x="32" y="402" width="656" height="64" rx="12" class="accent"/><text x="52" y="441" class="label">point in base = p + R × TOOL_TCP_OFFSET</text>
+<text x="318" y="369" class="note">Tool axes: R × local direction.</text>
+</svg>

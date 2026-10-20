@@ -1,0 +1,6 @@
+# Build tools only. No GTA, ROS, robot SDK, or provider dependencies.
+sphinx>=8.2,<9
+myst-parser>=4,<5
+furo>=2025.9
+sphinx-design>=0.6,<1
+sphinx-copybutton>=0.5.2,<1

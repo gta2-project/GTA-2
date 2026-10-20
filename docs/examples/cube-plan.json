@@ -1,0 +1,52 @@
+[
+  {
+    "subtask_id": 1,
+    "task": "Approach the cube",
+    "goal": "Review a position target above the visible top face",
+    "keypoints": [
+      {"name": "g_Ocube_Ptop_Lcenter", "description": "Center of the cube's visible top face"}
+    ],
+    "controllers": [
+      {
+        "priority": 1,
+        "controller": "PosAlign(g_eef_TCP, g_Ocube_Ptop_Lcenter, a_global_z, offset_approach)",
+        "explanation": "Illustrative vertical clearance constraint; not a complete hardware recipe",
+        "offset_parameters": [
+          {"name": "offset_approach", "value": 0.10, "unit": "m", "explanation": "Illustrative clearance"}
+        ]
+      }
+    ]
+  },
+  {
+    "subtask_id": 2,
+    "task": "Close the gripper",
+    "goal": "Illustrate a scheduled grasp command",
+    "keypoints": [],
+    "controllers": [
+      {
+        "priority": 1,
+        "controller": "GripperControl('close', 0.0, cube)",
+        "explanation": "Illustrative command, not confirmation of a grasp",
+        "offset_parameters": []
+      }
+    ]
+  },
+  {
+    "subtask_id": 3,
+    "task": "Lift the cube",
+    "goal": "Illustrate a parameter refinement",
+    "keypoints": [
+      {"name": "g_Ocube_Ptop_Lcenter", "description": "Center of the cube's visible top face"}
+    ],
+    "controllers": [
+      {
+        "priority": 1,
+        "controller": "PosAlign(g_eef_TCP, g_Ocube_Ptop_Lcenter, a_global_z, offset_lift)",
+        "explanation": "Illustrative fixture only; not an approved lift trajectory",
+        "offset_parameters": [
+          {"name": "offset_lift", "value": 0.07, "unit": "m", "explanation": "Illustrative refined offset"}
+        ]
+      }
+    ]
+  }
+]

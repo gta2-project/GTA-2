@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="550" viewBox="0 0 720 550" role="img" aria-labelledby="title desc">
+<title id="title">Image to keypoint and point cloud</title><desc id="desc">Model coordinates on the padded image become stored pixel coordinates, then are mapped back to the aligned organized cloud. Cloud points must preserve order, units, and base frame.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#52717a"/></marker><style>text{font-family:system-ui,sans-serif;fill:#173746} .title{font-size:25px;font-weight:700}.label{font-size:21px;font-weight:650}.note{font-size:17px;fill:#45616d}.tag{font-size:16px;font-weight:700;fill:#087f70}.box{fill:white;stroke:#b7ccd1;stroke-width:1.5}.flow{fill:none;stroke:#52717a;stroke-width:2;marker-end:url(#arrow)}.accent{fill:#e3f5ee;stroke:#63b69e;stroke-width:1.5}</style></defs><rect width="720" height="100%" rx="14" fill="#f7fafb"/>
+<text x="32" y="44" class="title">Image-to-3D keypoint mapping</text>
+<rect x="32" y="78" width="294" height="114" rx="12" class="box"/><text x="52" y="115" class="label">Original RGB image</text><text x="52" y="146" class="note">Same scene + resolution</text><text x="52" y="174" class="note">as the organized cloud</text>
+<path d="M326 135H389" class="flow"/>
+<rect x="396" y="78" width="292" height="114" rx="12" class="box"/><text x="416" y="115" class="label">Padded model image</text><text x="416" y="146" class="note">Square, resized to 1600 px</text><text x="416" y="174" class="note">Model reports [y, x] / 1000</text>
+<path d="M542 192V241" class="flow"/>
+<rect x="396" y="248" width="292" height="114" rx="12" class="accent"/><text x="416" y="285" class="label">Named keypoint</text><text x="416" y="316" class="note">Stored padded-image [x, y]</text><text x="416" y="344" class="note">Scale back, remove padding</text>
+<path d="M396 305H333" class="flow"/>
+<rect x="32" y="248" width="294" height="114" rx="12" class="box"/><text x="52" y="285" class="label">Aligned cloud lookup</text><text x="52" y="316" class="note">cloud[y, x] → [X, Y, Z]</text><text x="52" y="344" class="note">Metres in robot-base frame</text>
+<path d="M179 362V411" class="flow"/>
+<rect x="32" y="418" width="656" height="76" rx="12" class="accent"/><text x="52" y="450" class="label">3D keypoint in robot-base coordinates</text><text x="52" y="479" class="note">XYZ position for controller targets</text>
+<text x="32" y="531" class="note">Current mapping assumes landscape RGB and matching point order.</text>
+</svg>

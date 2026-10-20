@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="610" viewBox="0 0 720 610" role="img" aria-labelledby="title desc">
+<title id="title">Checkpoint and session lifecycle</title><desc id="desc">Prepare and save a checkpoint, load an independent working copy, requery the current scene, generate a script, run, and clean up. Refinement updates readiness and reset creates another working copy.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#52717a"/></marker><style>text{font-family:system-ui,sans-serif;fill:#173746} .title{font-size:25px;font-weight:700}.label{font-size:21px;font-weight:650}.note{font-size:17px;fill:#45616d}.tag{font-size:16px;font-weight:700;fill:#087f70}.box{fill:white;stroke:#b7ccd1;stroke-width:1.5}.flow{fill:none;stroke:#52717a;stroke-width:2;marker-end:url(#arrow)}.accent{fill:#e3f5ee;stroke:#63b69e;stroke-width:1.5}</style></defs><rect width="720" height="100%" rx="14" fill="#f7fafb"/>
+<text x="32" y="44" class="title">Checkpoint and session lifecycle</text>
+<rect x="32" y="78" width="294" height="93" rx="12" class="box"/><text x="52" y="113" class="label">Prepare + refine</text><text x="52" y="144" class="note">Subtasks + controller recipes</text>
+<path d="M326 124H389" class="flow"/>
+<rect x="396" y="78" width="292" height="93" rx="12" class="accent"/><text x="416" y="113" class="label">Save checkpoint</text><text x="416" y="144" class="note">Plan + context + artifacts</text>
+<path d="M542 171V220" class="flow"/>
+<rect x="396" y="227" width="292" height="93" rx="12" class="box"/><text x="416" y="262" class="label">Load working copy</text><text x="416" y="293" class="note">Restored plan + agent context</text>
+<path d="M396 273H333" class="flow"/>
+<rect x="32" y="227" width="294" height="93" rx="12" class="box"/><text x="52" y="262" class="label">Requery scene</text><text x="52" y="293" class="note">Same keypoint definitions</text>
+<path d="M179 320V369" class="flow"/>
+<rect x="32" y="376" width="294" height="93" rx="12" class="accent"/><text x="52" y="411" class="label">Script generation</text><text x="52" y="442" class="note">Plan + current grounding</text>
+<path d="M326 422H389" class="flow"/>
+<rect x="396" y="376" width="292" height="93" rx="12" class="box"/><text x="416" y="411" class="label">Run → cleanup</text><text x="416" y="442" class="note">New run, owned processes</text>
+<text x="32" y="520" class="note">Refinement invalidates affected grounding and script readiness.</text>
+<text x="32" y="552" class="note">Reset creates a fresh copy; previous session files stay on disk.</text>
+<text x="32" y="584" class="note">Application restart returns to checkpoint selection.</text>
+</svg>
